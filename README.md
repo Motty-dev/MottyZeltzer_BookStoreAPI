@@ -27,6 +27,7 @@ BookStore API made using Node.js, Express.js, and MongoDB.
    - For now only admin can delete a book or an order.
    - Its super easy and simple to change roles permissions (in code) with restrictTo() middleware function.
 
+
 ### Guide to local setup
 
 1. Clone this repository
@@ -44,6 +45,5 @@ BookStore API made using Node.js, Express.js, and MongoDB.
    ```
 4. The database is in the Atlas cloud. it will be connected remotely.
 
-5. Use the API in Postman or any other API testing tool 
-
-
+5. You can click the button and fork the postman's collection and its testing enevironment. 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/16110378-09602018-bb92-448d-811b-60ebfa9e7332?action=collection%2Ffork&collection-url=entityId%3D16110378-09602018-bb92-448d-811b-60ebfa9e7332%26entityType%3Dcollection%26workspaceId%3D8a4445f3-3425-42bd-a8bf-459af8b49e69#?env%5BBookSotreAPI%5D=W3sia2V5IjoiVVJMIiwidmFsdWUiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQifSx7ImtleSI6IkpXVCIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQifV0=)
