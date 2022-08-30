@@ -10,7 +10,7 @@ router.post('/login', authController.login);
 router.post('/forgotPassword', authController.forgotPassword);
 router.patch('/resetPassword/:token', authController.resetPassword);
 
-// Will protect all teh routes from this point
+// Will protect all the routes from this point
 router.use(authController.protect);
 
 router.patch('/updateMyPassword', authController.updatePassword);

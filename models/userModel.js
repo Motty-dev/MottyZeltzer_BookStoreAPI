@@ -24,7 +24,6 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         requierd: ['Please provide a password'],
-        minlength: 8,
         select: false,
         match: [/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/,
         "Password must Contain at least 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"]
@@ -37,7 +36,8 @@ const userSchema = new mongoose.Schema({
                 return el === this.password;
             },
             message: 'Passwords are not the same!'
-        }
+        },
+        select: false,
     },
     passwordChangedAt: Date,
     passwordResetToken: String,
@@ -60,25 +60,28 @@ userSchema.pre('save', async function(next) {
     next();
 });
 
+// Before finding, filtering the inactive ones
 userSchema.pre(/^find/, function(next){
     // 'This' points to the current query
     this.find({active: {$ne: false}});
     next();
 });
 
+//Before save checks if its modified or not
 userSchema.pre('save', function(next) {
     if(!this.isModified('password') || this.isNew) return next();
-
-    this.passwordChangedAt = Date.now() - 1000;
+    
+    this.passwordChangedAt = Date.now();
     next();
 });
 
 
-
+//Password checking meathod 
 userSchema.methods.correctPassword = async function(candidatePassword, userPassword) {
     return await bcrypt.compare(candidatePassword, userPassword);
 };
 
+//New password with old token check meathod
 userSchema.methods.changesPasswordAfter = function(JWTTimestamp) {
     if(this.passwordChangedAt) {
         const changedTimeStamps = parseInt(this.passwordChangedAt.getTime() /1000, 10); 
@@ -87,6 +90,7 @@ userSchema.methods.changesPasswordAfter = function(JWTTimestamp) {
     return false;
 };
 
+//Generator for a temp token
 userSchema.methods.createPasswordResetToken = function() {
     const resetToken = crypto.randomBytes(32).toString('hex');
     
