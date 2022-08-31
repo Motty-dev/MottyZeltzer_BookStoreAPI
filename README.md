@@ -30,20 +30,20 @@ BookStore API made using Node.js, Express.js, and MongoDB.
    - Show individual book details
    - Update & Delete
    - Endpoints:
-      - api/books    --GET      
-      - api/books    --POST
-      - api/books/:id    --GET
-      - api/books/:id    --PATCH
-      - api/books/:id    --DELETE
+      - api/books    *GET*      
+      - api/books    *POST*
+      - api/books/:id    *GET*
+      - api/books/:id    *PATCH*
+      - api/books/:id    *DELETE*
 3. **Orders**
    - Books can be orderd only by logged in user
    - Users can see their respective orders list or individual order.
    - Endpoints:
-      - api/books   --GET
-      - api/books   --POST
-      - api/books/:id    --GET
-      - api/books/:id    --PATCH
-      - api/books/:id    --DELETE
+      - api/books   *GET*
+      - api/books   *POST*
+      - api/books/:id    *GET*
+      - api/books/:id    *PATCH*
+      - api/books/:id    *DELETE*
 4. **Admin features**
    - For now only admin can delete a book or an order.
    - Its super easy and simple to change roles permissions (in code) with restrictTo() middleware function.
