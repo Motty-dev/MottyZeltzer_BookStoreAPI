@@ -30,7 +30,6 @@ BookStore API made using Node.js, Express.js, and MongoDB.
    ```bash
    git clone https://github.com/Motty-dev/MottyZeltzer_BookStoreAPI.git
    ```
-3. Copy config.env file to the root directory 
 2. Install node packages (from root directory)
    ```bash
    npm install
