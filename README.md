@@ -14,17 +14,17 @@ BookStore API made using Node.js, Express.js, and MongoDB.
    - For login, _Email_ and _Password_ is required
    - Authentication is done by JWT tokens.
    - Endpoints: 
-      - api/users     get
-      - api/users/:id       get
-      - api/users/:id       patch
-      - api/users/:id       delete
-      - api/users/signup      post
-      - api/users/login       post
-      - api/users/forgotPassword       post
-      - api/users/resetPassword/:token       patch
-      - api/users/updateMyPassword       patch
-      - api/users/updateMe       patch
-      - api/users/deleteMe       delete
+      - api/users     *GET*
+      - api/users/:id       *GET*
+      - api/users/:id       *PATCH*
+      - api/users/:id       *DELETE*
+      - api/users/signup      *POST*
+      - api/users/login       *POST*
+      - api/users/forgotPassword       *POST*
+      - api/users/resetPassword/:token       *PATCH*
+      - api/users/updateMyPassword       *PATCH*
+      - api/users/updateMe       *PATCH*
+      - api/users/deleteMe       *DELETE*
 2. **Books**
    - Show a list of books
    - Show individual book details
