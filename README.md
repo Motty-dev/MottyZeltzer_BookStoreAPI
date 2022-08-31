@@ -12,8 +12,8 @@ BookStore API made using Node.js, Express.js, and MongoDB.
    - A user can signup by _Email_ and _Password_
    - In the request we can specify the role under role property
    - For login, _Email_ and _Password_ is required
-   - Authentication is done by JWT tokens
-   -Endpoints: 
+   - Authentication is done by JWT tokens.
+   - Endpoints: 
       - api/users     get
       - api/users/:id       get
       - api/users/:id       patch
@@ -29,7 +29,7 @@ BookStore API made using Node.js, Express.js, and MongoDB.
    - Show a list of books
    - Show individual book details
    - Update & Delete
-   -Endpoints:
+   - Endpoints:
       - api/books       get
       - api/books       post
       - api/books/:id        get
@@ -37,8 +37,8 @@ BookStore API made using Node.js, Express.js, and MongoDB.
       - api/books/:id        delete
 3. **Orders**
    - Books can be orderd only by logged in user
-   - Users can see their respective orders list or individual order
-   -Endpoints:
+   - Users can see their respective orders list or individual order.
+   - Endpoints:
       - api/books   get
       - api/books   post
       - api/books/:id    get
